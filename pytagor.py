@@ -32,13 +32,6 @@ tmp_c_multy.sort()
 
 result_pytagoras = []
 
-#print(len(tmp_c_multy)) 
-
-for i in tmp_pythagor:
-    for x in tmp_c_multy:
-        if i[2]/x == 1:
-            #print(str(i) + "\t" + str(x))
-            result_pytagoras.append(i)
                   
 #print(result_pytagoras)
 
