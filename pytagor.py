@@ -22,7 +22,7 @@ def gcd(a, b):
 # basic == true index [0] = jenom zakladni trojice)   
 # basic != index [0] = jenom zakladni trojice, index[1] = i s násobky 
 # basic != index [0] = jenom zakladni trojice, index[1] = i s násobky,  index[2] = bez dvojic s prohozenim ab
-def search_pythagoras_number(max_a, max_b, basic = True):
+def search_pythagoras_numbers(max_a, max_b, basic = True):
 
     tmp_list_uniq_c = []
     tmp_list_pythagoras_found_number =[]
@@ -60,22 +60,22 @@ def search_pythagoras_number(max_a, max_b, basic = True):
 
 # nejake to zobrazeni             
 def show_list_number(list_of_number):
-    print("found number in list ")
+    print("found following numbers in list ")
     j=1
     for show_i in list_of_number:
         #print("found  basic pythagoras numbers \t "+str(res_pyth_combi_found)+ "\t divisor "  + str(gcd(a,c))+ "\t" + str(gcd(b,c)) )
         print(" " + str(j) + "\t "+str(show_i)+ "\t divisor "  + str(gcd(show_i[1],show_i[0])))
         j+= 1
-    print("Amount of found " + str(len(list_of_number)))      
+    print("Amount of numbers found " + str(len(list_of_number)))      
         
 
 clearConsole()
-print("start searching pythagoras numbers 1.5")
+print("Start searching pythagoras numbers 1.6")
 
 
-result_pytagoras_basic = search_pythagoras_number(100,100,False)[0]
-result_pytagoras_mutli = search_pythagoras_number(100,100,False)[1]
-result_pytagoras_without_switch = search_pythagoras_number(100,100,False)[2]
+result_pytagoras_basic = search_pythagoras_numbers(100,100,False)[0]
+result_pytagoras_mutli = search_pythagoras_numbers(100,100,False)[1]
+result_pytagoras_without_switch = search_pythagoras_numbers(100,100,False)[2]
                   
 show_list_number(result_pytagoras_basic)
 
