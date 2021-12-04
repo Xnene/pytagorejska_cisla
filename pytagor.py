@@ -8,7 +8,7 @@ def clearConsole():
     os.system(command)
 
 #nejvetsi spolecny delitel 
-#printGreatest common divisor
+#Greatest common divisor
 def gcd(a, b):
     while (b != 0):
         c = b
@@ -48,7 +48,7 @@ def search_pythagoras_number(max_a, max_b, basic = True):
                         
                         #  Nalzezení základní pytagorijské trojice a zobrazime si divisor
                         if (gcd(a,c) == 1) and (gcd(b,c) == 1):
-                            #print("found  basic pythagoras number \t "+str(res_pyth_combi_found)+ "\t divisor "  + str(gcd(a,c))+ "\t" + str(gcd(b,c)) )
+                            #print("found  basic pythagoras numbers \t "+str(res_pyth_combi_found)+ "\t divisor "  + str(gcd(a,c))+ "\t" + str(gcd(b,c)) )
                             tmp_list_uniq_c.append(int(c))
                             tmp_list_pythagoras_found_basic_number.append(res_pyth_combi_found)
     if basic:
@@ -63,14 +63,14 @@ def show_list_number(list_of_number):
     print("found number in list ")
     j=1
     for show_i in list_of_number:
-        #print("found  basic pythagoras number \t "+str(res_pyth_combi_found)+ "\t divisor "  + str(gcd(a,c))+ "\t" + str(gcd(b,c)) )
+        #print("found  basic pythagoras numbers \t "+str(res_pyth_combi_found)+ "\t divisor "  + str(gcd(a,c))+ "\t" + str(gcd(b,c)) )
         print(" " + str(j) + "\t "+str(show_i)+ "\t divisor "  + str(gcd(show_i[1],show_i[0])))
         j+= 1
-    print("celkem jsme našli " + str(len(list_of_number)))      
+    print("Amount of found " + str(len(list_of_number)))      
         
 
 clearConsole()
-print("start search pythagoras number 1.5")
+print("start searching pythagoras numbers 1.5")
 
 
 result_pytagoras_basic = search_pythagoras_number(100,100,False)[0]
